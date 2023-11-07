@@ -13,12 +13,28 @@
 		980C6F902AEC3370004DCCF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980C6F8F2AEC3370004DCCF3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		98385DA12AF96DA3007D33B7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		980C6F852AEC336F004DCCF3 /* NotificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		980C6F882AEC336F004DCCF3 /* NotificationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTestApp.swift; sourceTree = "<group>"; };
 		980C6F8A2AEC336F004DCCF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		980C6F8C2AEC3370004DCCF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		980C6F8F2AEC3370004DCCF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		980C6F962AEFF5F4004DCCF3 /* NotificationTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationTest.entitlements; sourceTree = "<group>"; };
+		98385D9B2AF96DA3007D33B7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		98385D9D2AF96DA3007D33B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				980C6F872AEC336F004DCCF3 /* NotificationTest */,
+				98385D9A2AF96DA3007D33B7 /* Test */,
 				980C6F862AEC336F004DCCF3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +68,7 @@
 		980C6F872AEC336F004DCCF3 /* NotificationTest */ = {
 			isa = PBXGroup;
 			children = (
+				980C6F962AEFF5F4004DCCF3 /* NotificationTest.entitlements */,
 				980C6F882AEC336F004DCCF3 /* NotificationTestApp.swift */,
 				980C6F8A2AEC336F004DCCF3 /* ContentView.swift */,
 				980C6F8C2AEC3370004DCCF3 /* Assets.xcassets */,
@@ -67,6 +85,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		98385D9A2AF96DA3007D33B7 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				98385D9B2AF96DA3007D33B7 /* NotificationService.swift */,
+				98385D9D2AF96DA3007D33B7 /* Info.plist */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +104,7 @@
 				980C6F812AEC336F004DCCF3 /* Sources */,
 				980C6F822AEC336F004DCCF3 /* Frameworks */,
 				980C6F832AEC336F004DCCF3 /* Resources */,
+				98385DA12AF96DA3007D33B7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -267,8 +295,10 @@
 		980C6F942AEC3370004DCCF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotificationTest/NotificationTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NotificationTest/Preview Content\"";
@@ -296,8 +326,10 @@
 		980C6F952AEC3370004DCCF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotificationTest/NotificationTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NotificationTest/Preview Content\"";
